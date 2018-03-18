@@ -1,0 +1,91 @@
+.navbar{
+	min-height: 80px;
+	width: 100%;
+	margin-bottom: 0px !important;
+	padding: 0;
+}
+
+.navbar-brand img{
+	max-height: 55px;
+	padding: 3px;
+	background-color: transparent;
+}
+
+.navbar-toggle{
+	margin-top: 25px;
+}
+
+.navbar-left{
+	text-align: justify;
+	margin-left: 3%;
+}
+
+.navbar-left li{
+	display: inline-block;
+	font-size: 16px;
+	color: black;
+	padding: 12px 11px;
+}
+
+.navbar-left a{
+	color: black;
+}
+
+.navbar-right{
+	text-align: justify;
+	margin-right: 3%;
+}
+
+.navbar-right li{
+	display: inline-block;
+	font-size: 16px;
+	color: black;
+	padding: 12px 11px;
+}
+
+.footer{
+	width: 100%;
+	height: 80px;
+	background-color: #2c2c2c;
+}
+
+.footer-about{
+	vertical-align: middle;
+	color: white;
+	text-align: center;
+	padding: 25px;
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 850px){
+	.navbar-left{
+		width: 50%;
+		display: inline-block;
+		padding-right: 40px;
+		margin-left: 0;
+		float: left;
+	}
+	
+	.navbar-right{
+		width: 50%;
+		display: inline-block;
+		float: right;
+		margin-right: 0;
+		padding-left: 40px;
+	}
+	
+	.navbar-left li a{
+		font-size: 10px;
+		padding: 12px 3px;
+	}
+	
+	.navbar-right li a{
+		font-size: 10px;
+		padding: 12px 3px;
+	}
+	
+	.footer-about{
+		font-size: 12px;
+		padding: 25px;
+	}
+}
