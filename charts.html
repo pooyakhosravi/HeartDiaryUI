@@ -43,7 +43,7 @@
 				<div class="nav navbar-nav navbar-left">
 					<li><a href="index.html">HOME</a></li>
 					<li><a href="profile.html">PROFILE</a></li>
-					<li><a href="charts.html">Charts</a></li>
+					<li><a href="charts.html">CHARTS</a></li>
 				</div>
 				<div class="nav navbar-nav navbar-right">
 					<li><a href="login.html">LOG IN</a></li>
@@ -65,51 +65,36 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+    </div>
 
+
+    
+    <div ng-app="app" ng-controller="LineCtrl"> 
+            <center class="row">
+                    <div class="col-xs-8">
+            <select class="form-control" ng-model="mydate" ng-change="changeDate(mydate)">
+                    <option>Select day</option>
+                    <option ng-repeat="date in dates">{{date}}</option>
+                    
+            </select>
+
+            {{mydate}}
+
+            <canvas id="doughnut" class="chart chart chart-line"
+            chart-data="data" chart-labels="labels" 
+            chart-click="onClick">
+        </canvas> 
+        
+
+        </div>
+    </center>
+    
+    </div>
+    
+   
 
 	<hr>
-	
-	<div class="recom container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="recom_header">
-					Recommendations 
-				</div>
-				<p>Everytime you feel stressed, we recommend you to go to here:</p>
-				<br>
-				<div ng-app="c_ajsView" ng-controller="c_ajsCtrl"> 
-					    <div class="col-sm-8">
-							<div class="panel panel-default">
-								<div class="panel-heading">Recommendations</div>
-								<div ng-repeat="loc in data" ng-init='index = $index'>
-									<div ng-show="index < 3">
-										<p> Location # {{index + 1}}</p>
-										<div>
-											<ul>
-												<li>Name: {{loc.name}}</li>
-												<li>Average Heartrate: {{loc.avg_hr}}</li>
-												<li>Miuntes at location: {{loc.count}}</li>
-												<li>Time mostly spent during: {{loc.max_time}}</li>
-											</ul>
-										</div>
-										<center>
-											<iframe width="600" height="450" frameborder="0" style="border:0" src="{{trustAsResourceUrl('https://www.google.com/maps/embed/v1/place?q=' + urlencode(loc.name) + '&key=AIzaSyDtGrFbcJ8VzRCMXOQZICg-jReGRGEhmGE')}}"></iframe>
-										</center>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-
-				</div>
 				
-				
-				
-			</div>
-		</div>
-	</div>
-	<script src="profile.js"></script>
+	<script src="mycharts.js"></script>
 </body>
 </html>
